@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM java:8
 ADD HelloWorld.class HelloWorld.class
-RUN apk --update add openjdk8-jre
-ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "HelloWorld"]
+RUN javac HelloWorld.java
+CMD ["java", "HelloWorld"]
