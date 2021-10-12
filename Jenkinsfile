@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Building image') {
       steps {
-        sh '''
+        bat '''
           docker build --tag docker-hello-world:latest .
         '''
       }
