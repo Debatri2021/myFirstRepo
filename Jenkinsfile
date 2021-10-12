@@ -9,7 +9,9 @@ pipeline {
     stage('Building image') {
       steps {
         bat '''
-          javac HelloWorld.java && java HelloWorld
+          echo "started building"
+          docker build -t newImage .
+          echo "completed building"
         '''
       }
     }
