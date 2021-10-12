@@ -1,4 +1,5 @@
 FROM java:8
-ADD HelloWorld.class HelloWorld.class
+COPY . .
+WORKDIR .
 RUN javac HelloWorld.java
 CMD ["java", "HelloWorld"]
