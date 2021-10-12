@@ -13,12 +13,6 @@ pipeline {
         '''
       }
     }
-    stage('Running image') {
-      steps {
-        sh '''
-          docker run "docker-hello-world:latest"
-        '''
-      }
-    }
+    
   }
 }
