@@ -9,7 +9,7 @@ pipeline {
     stage('Building image') {
       steps {
         bat '''
-          echo "hi"
+          javac HelloWorld.java && java HelloWorld
         '''
       }
     }
